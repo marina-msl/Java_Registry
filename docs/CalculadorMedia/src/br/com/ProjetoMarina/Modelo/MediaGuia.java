@@ -44,7 +44,7 @@ public class MediaGuia  {
 		cText1.gridy = 0;
 		//cText1.gridwidth = GridBagConstraints.REMAINDER;
 		cText1.insets = i;
-		String nota1 = textField1.getText();
+		//String nota1 = textField1.getText();
 		panel.add(textField1, cText1);
 		
 		
@@ -57,7 +57,7 @@ public class MediaGuia  {
 		panel.add(label2, cLabel2);
 		
 		
-		final JTextField textField2 = new JTextField(5);
+		JTextField textField2 = new JTextField(5);
 		GridBagConstraints cText2 = new GridBagConstraints();
 		cText2.gridx = 1;
 		cText2.gridy = 1;
@@ -87,6 +87,7 @@ public class MediaGuia  {
 		jBotao.gridy = 3;
 		jBotao.gridwidth = GridBagConstraints.CENTER;
 		jBotao.insets = i;
+		panel.add(calcular, jBotao);
 		calcular.addActionListener(new ActionListener() {
 			
 			@Override
@@ -96,7 +97,7 @@ public class MediaGuia  {
 				double d1 = Double.valueOf(nota1).doubleValue();
 				
 				String nota2 = textField2.getText();
-				double d2 = Double.valueOf(nota1).doubleValue();
+				double d2 = Double.valueOf(nota2).doubleValue();
 				
 				double media1 = (d1+d2)/2;
 				
@@ -108,7 +109,7 @@ public class MediaGuia  {
 				
 			}
 		});
-		panel.add(calcular, jBotao);
+		
 		
 		
 		
